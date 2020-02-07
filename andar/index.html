@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>안다르 모작</title>
+
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- 아울 캐러셀 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    
+    <!-- 최상단 메뉴 바 시작 -->
+    <div class="header">
+        <div class="con row">
+            <a href="#" class="logo block cell img-box">
+                <img src="https://www.andar.co.kr/web/upload/logo/main_logo.svg" alt="">
+            </a>
+
+            <nav class="menu-1 cell-right">
+                <ul class="row">
+                    <li class="cell"><a href="#">로그인</a></li>
+                    <li class="cell"><a href="#">회원가입</a></li>
+                    <li class="cell"><a href="#">나의쇼핑</a></li>
+                    <li class="cell"><a href="#">고객센터</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="menu-bar con row">
+            <nav class="menu-box-1 cell">
+                <ul class="row">
+                    <li class="cell">
+                        <a href="#" class="block">신상품</a>
+                        <ul>
+                            <li><a href="#" class="block"><span class="inline-block relative">베스트 상품</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">아우터</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">상의</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">하의</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">액세서리</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="cell">
+                        <a href="#" class="block" style="color:#589db7;">스트리트</a>
+                        <ul>
+                            <li><a href="#" class="block"><span class="inline-block relative">아우터</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">상의/하의</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">액세서리</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="cell">
+                        <a href="#" class="block">1&1</a>
+                        <ul>
+                            <li><a href="#" class="block"><span class="inline-block relative">1&1</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="cell">
+                        <a href="#" class="block">아우터</a>
+                        <ul>
+                            <li><a href="#" class="block"><span class="inline-block relative">다운점퍼</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">집업재킷</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">가디건</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="cell">
+                        <a href="#" class="block">상의</a>
+                        <ul>
+                            <li><a href="#" class="block"><span class="inline-block relative">탑</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">스포츠브라</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">반팔티</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">긴팔티</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">민소매티</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">후드/맨투맨</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="cell">
+                        <a href="#" class="block">하의</a>
+                        <ul>
+                            <li><a href="#" class="block"><span class="inline-block relative">9부 레깅스</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">8/8.2부 레깅스</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">7부 레깅스</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">3/5부 레깅스</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">임부 레깅스</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">숏팬츠</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">롱팬츠</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="cell">
+                        <a href="#" class="block">액세서리</a>
+                        <ul>
+                            <li><a href="#" class="block"><span class="inline-block relative">삭스/워머</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">모자/헤어밴드</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">가방</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">이너웨어</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">용품</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="cell">
+                        <a href="#" class="block">세일</a>
+                        <ul>
+                            <li>
+                                <a href="#" class="block">
+                                    <span class="inline-block relative">아우터</span>
+                                </a>
+                            </li>
+                            <li><a href="#" class="block"><span class="inline-block relative">상의</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">하의</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="cell">
+                        <a href="#" class="block">이벤트/기획</a>
+                    </li>
+                    <li class="cell">
+                        <a href="#" class="block">안다르 소식</a>
+                        <ul>
+                            <li><a href="#" class="block"><span class="inline-block relative">안다르 스토리</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">안다르 컬렉션</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">안다르TV</span></a></li>
+                            <li><a href="#" class="block"><span class="inline-block relative">안다르 매거진</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav class="menu-box-2 cell-right">
+                <ul class="box row">
+                    <li class="serch-box cell">
+                        <input type="검색어를 입력하시오">
+                        <a href="#" class="serch-btn"><img src="https://www.andar.co.kr/web/upload/img/search.svg" alt=""></a>
+                    </li>
+                    <li class="cart cell">
+                        <a href="#"><img src="https://www.andar.co.kr/web/upload/img/icon_cart.svg" alt=""></a><span>0</span>
+                    </li>
+                    <li class="all-menu cell">
+                        <a href="#"><img src="https://www.andar.co.kr/web/upload/img/icon_all.svg" alt=""></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- 최상단 메뉴 바 끝-->
+
+        <!-- 메인 시작 -->
+        <!-- 메인 슬라이더 -->
+        <div class="main ">
+            <div class="main-slider con row">
+                <div class="cell">
+                    <div class="slides-img-1">
+                        <div class="prv">
+                            <div>
+                                <img src="https://www.andar.co.kr/_wisa/img/main/main_prev.png" alt="">
+                            </div>
+                        </div>
+                        <img src="https://www.andar.co.kr/web/andar/banner/main_visual/200114/banner-pc.jpg" alt="">
+                        <div class="text">
+                            <h1>
+                                1월 운동복 풀세트
+                                <br> 이렇게 장착하면 끝
+                            </h1>
+                            <div>
+                                일상과 운동의 흐름을 이어줄
+                                <br> #긴팔티셔츠 #탱크탑 #레깅스 신상 아이템 출시
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="slides-img-1">
+                        <div class="next">
+                            <div>
+                                <img src="https://www.andar.co.kr/_wisa/img/main/main_next.png" alt="">
+                            </div>
+                        </div>
+                        <img src="https://www.andar.co.kr/web/andar/banner/main_visual/200107/banner-pc.jpg" alt="">
+                        <div class="text">
+                            <h1>
+                                시그니처 브라탑
+                                <br> 컬렉션 출시
+                            </h1>
+                            <div>
+                                신상 할인가 27,000원부터
+                                <br> 단 24시간만 타임 세일 진행합니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 메인 슬라이더 끝 -->
+            <!-- 베스트상품 리스트 -->
+            <div class="menu-box-3 con row">
+                <h1>이달의 베스트</h1>
+                <div class="best-menu-bar cell-right">
+                    <ul class="row">
+                        <li class="cell active"><a href="#" onclick="return false;">전체</a></li>
+                        <li class="cell"><a href="#" onclick="return false;">1&1</a></li>
+                        <li class="cell"><a href="#" onclick="return false;">스트리트</a></li>
+                        <li class="cell"><a href="#" onclick="return false;">아우터</a></li>
+                        <li class="cell"><a href="#" onclick="return false;">상의</a></li>
+                        <li class="cell"><a href="#" onclick="return false;">하의</a></li>
+                        <li class="cell"><a href="#" onclick="return false;">액세서리</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="product-list con">
+                <ul class="row">
+                    <li class="cell">
+                        <div class="box">
+                            <div class="img">
+                                <img src="https://akamai.poxo.com/andar01/andar.co.kr/web/product/tiny/201909/d44ace8f9b4bb8a0925663b5e689d837.jpg" alt="">
+                                <div class="cover" style="background-image:url(https://akamai.poxo.com/andar01/andar.co.kr/web/product/small/201909/44a73f05ae1615bb9c4a07b534425507.jpg);"></div>
+                            </div>
+                            <div class="info row">
+                                <div class="reviews cell-right">실시간리뷰 66,985</div>
+                                <div class="sig cell">[시그니처아이템]</div>
+                            </div>
+                            <div class="name">[1&1] 안다르 에어쿨링 NEW 뉴지니 9부&8.2부</div>
+                            <div class="price row">
+                                <div class="sale cell">48,000원</div>
+                                <div class="sell cell">78,000원</div>
+                            </div>
+                            <div class="icon row">
+                                <img src="https://www.andar.co.kr/web/upload/custom_265.png" alt="">
+                                <img src="https://www.andar.co.kr/web/upload/custom_269.png" alt="">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cell">
+                        <div class="box">
+                            <div class="img">
+                                <img src="https://akamai.poxo.com/andar01/andar.co.kr/web/product/tiny/20191118/892fc6686f324f1ae8266c2eac93fb61.jpg" alt="">
+                                <div class="cover" style="background-image:url(https://akamai.poxo.com/andar01/andar.co.kr/web/product/small/20191118/b917e83ef838ab1da1af38c074cd18ff.jpg);"></div>
+                            </div>
+                            <div class="info row">
+                                <div class="reviews cell-right">실시간리뷰 9,939</div>
+                                <div class="sig cell">[스페셜 패키지]</div>
+                            </div>
+                            <div class="name">[1&1] 안다르 에어웜 기모 지니 9부</div>
+                            <div class="price row">
+                                <div class="sale cell">48,000원</div>
+                                <div class="sell cell">78,000원</div>
+                            </div>
+                            <div class="icon row">
+                                <img src="https://www.andar.co.kr/web/upload/custom_265.png" alt="">
+                                <img src="https://www.andar.co.kr/web/upload/custom_269.png" alt="">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cell">
+                        <div class="box">
+                            <div class="img">
+                                <img src="https://akamai.poxo.com/andar01/andar.co.kr/web/product/tiny/20191216/10218813b2a65e51bb222f4053344ac5.jpg" alt="">
+                                <div class="cover" style="background-image:url(https://akamai.poxo.com/andar01/andar.co.kr/web/product/small/20191216/9acfa47308d418c2f43455f8f1bfe831.jpg);"></div>
+                            </div>
+                            <div class="info row">
+                                <div class="reviews cell-right">실시간리뷰 2,230</div>
+                                <div class="sig cell">[스페셜 패키지]</div>
+                            </div>
+                            <div class="name">[1&1] 안다르 에어웜 기모 샤론 팬츠</div>
+                            <div class="price row">
+                                <div class="sale cell">48,000원</div>
+                                <div class="sell cell">72,000원</div>
+                            </div>
+                            <div class="icon row">
+                                <img src="https://www.andar.co.kr/web/upload/custom_265.png" alt="">
+                                <img src="https://www.andar.co.kr/web/upload/custom_269.png" alt="">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cell">
+                        <div class="box">
+                            <div class="img">
+                                <img src="https://akamai.poxo.com/andar01/andar.co.kr/web/product/tiny/201910/0540ec62c07091e877e43b7b85c9bd31.jpg" alt="">
+                                <div class="cover" style="background-image:url(https://akamai.poxo.com/andar01/andar.co.kr/web/product/small/201909/3ef72b1a6163d915636947e4b2c2a54c.jpg);"></div>
+                            </div>
+                            <div class="info row">
+                                <div class="reviews cell-right">실시간리뷰 15,395</div>
+                                <div class="sig cell">[스페셜 패키지]</div>
+                            </div>
+                            <div class="name">[1&1] 안다르 에어터치페이스 티셔츠</div>
+                            <div class="price row">
+                                <div class="sale cell">36,000원</div>
+                                <div class="sell cell">54,000원</div>
+                            </div>
+                            <div class="icon row">
+                                <img src="https://www.andar.co.kr/web/upload/custom_265.png" alt="">
+                                <img src="https://www.andar.co.kr/web/upload/custom_269.png" alt="">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cell">
+                        <div class="box">
+                            <div class="img">
+                                <img src="https://akamai.poxo.com/andar01/andar.co.kr/web/product/tiny/201909/021b5ef4aebb76d8dae644426bfc4db7.jpg" alt="">
+                                <div class="cover" style="background-image:url(https://akamai.poxo.com/andar01/andar.co.kr/web/product/small/201904/9a7a324bc2aec2a592fd0a54727c5826.jpg);"></div>
+                            </div>
+                            <div class="info row">
+                                <div class="reviews cell-right">실시간리뷰 33,050</div>
+                                <div class="sig cell">[아이코닉아이템]</div>
+                            </div>
+                            <div class="name">[1&1] 안다르 에어터치 베이직 티셔츠</div>
+                            <div class="price row">
+                                <div class="sale cell">29,000원</div>
+                                <div class="sell cell">68,000원</div>
+                            </div>
+                            <div class="icon row">
+                                <img src="https://www.andar.co.kr/web/upload/custom_265.png" alt="">
+                                <img src="https://www.andar.co.kr/web/upload/custom_269.png" alt="">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cell">
+                        <div class="box">
+                            <div class="img">
+                                <img src="https://akamai.poxo.com/andar01/andar.co.kr/web/product/tiny/201910/f537575a3e4b27b061b399c6c78abf82.jpg" alt="">
+                                <div class="cover" style="background-image:url(https://akamai.poxo.com/andar01/andar.co.kr/web/product/small/201910/4c33bc692c3da07bd27ea7b9066f5532.jpg);"></div>
+                            </div>
+                            <div class="info row">
+                                <div class="reviews cell-right">실시간리뷰 8,412</div>
+                                <div class="sig cell">[스페셜 패키지]</div>
+                            </div>
+                            <div class="name">[1&1] 안다르 에어핏 티셔츠 롱&슬리브</div>
+                            <div class="price row">
+                                <div class="sale cell">49,000원</div>
+                                <div class="sell cell">58,000원</div>
+                            </div>
+                            <div class="icon row">
+                                <img src="https://www.andar.co.kr/web/upload/custom_265.png" alt="">
+                                <img src="https://www.andar.co.kr/web/upload/custom_269.png" alt="">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cell">
+                        <div class="box">
+                            <div class="img">
+                                <img src="https://akamai.poxo.com/andar01/andar.co.kr/web/product/tiny/201910/2f0875a019709fac10ff43074cfa40b7.jpg" alt="">
+                                <div class="cover" style="background-image:url(https://akamai.poxo.com/andar01/andar.co.kr/web/product/small/201910/119dd4708ee29bdea6d426a646666b61.jpg);"></div>
+                            </div>
+                            <div class="info row">
+                                <div class="reviews cell-right">실시간리뷰 6,348</div>
+                                <div class="sig cell">[스페셜 패키지]</div>
+                            </div>
+                            <div class="name">[1&1] 안다르 코듀라 NZ&클로젯 집업</dv>
+                                <div class="price row">
+                                    <div class="sale cell">78,000원</div>
+                                    <div class="sell cell">137,000원</div>
+                                </div>
+                                <div class="icon row">
+                                    <img src="https://www.andar.co.kr/web/upload/custom_265.png" alt="">
+                                    <img src="https://www.andar.co.kr/web/upload/custom_269.png" alt="">
+                                </div>
+                            </div>
+                    </li>
+                    <li class="cell">
+                        <div class="box">
+                            <div class="img">
+                                <img src="https://akamai.poxo.com/andar01/andar.co.kr/web/product/tiny/201909/43595a26fef46afe784a0c87d53b78dc.jpg" alt="">
+                                <div class="cover" style="background-image:url(https://akamai.poxo.com/andar01/andar.co.kr/web/product/small/201904/2b476d93de6ea443cd45a8ed708fad5c.jpg);"></div>
+                            </div>
+                            <div class="info row">
+                                <div class="reviews cell-right">실시간리뷰 2,169</div>
+                                <div class="sig cell">[스페셜 패키지]</div>
+                            </div>
+                            <div class="name">[1&1] 안다르 에어페더 페이퍼 티셔츠</div>
+                            <div class="price row">
+                                <div class="sale cell">32,000원</div>
+                                <div class="sell cell">104,000원</div>
+                            </div>
+                            <div class="icon row">
+                                <img src="https://www.andar.co.kr/web/upload/custom_265.png" alt="">
+                                <img src="https://www.andar.co.kr/web/upload/custom_269.png" alt="">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cell">
+                        <div class="box">
+                            <div class="img">
+                                <img src="https://akamai.poxo.com/andar01/andar.co.kr/web/product/tiny/201909/5f7444b2253eba7e79b9bef5d6e2c0e4.jpg" alt="">
+                                <div class="cover" style="background-image:url(https://akamai.poxo.com/andar01/andar.co.kr/web/product/small/201905/4dc783b2b69c8724bdea5ced11c7dfc2.jpg);"></div>
+                            </div>
+                            <div class="info row">
+                                <div class="reviews cell-right">실시간리뷰 4,848</div>
+                                <div class="sig cell">[스페셜 패키지]</div>
+                            </div>
+                            <div class="name">[1&1] 안다르 퍼슬 티셔츠</div>
+                            <div class="price row">
+                                <div class="sale cell">39,000원</div>
+                                <div class="sell cell">96,000원</div>
+                            </div>
+                            <div class="icon row">
+                                <img src="https://www.andar.co.kr/web/upload/custom_265.png" alt="">
+                                <img src="https://www.andar.co.kr/web/upload/custom_269.png" alt="">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cell">
+                        <div class="box">
+                            <div class="img">
+                                <img src="https://akamai.poxo.com/andar01/andar.co.kr/web/product/tiny/201909/9b47f0d16c97e2aaa9ddd6b0e1a098d9.jpg" alt="">
+                                <div class="cover" style="background-image:url(https://akamai.poxo.com/andar01/andar.co.kr/web/product/small/201909/889af02f3552078f8def1d3f57712977.jpg);"></div>
+                            </div>
+                            <div class="info row">
+                                <div class="reviews cell-right">실시간리뷰 4,760</div>
+                                <div class="sig cell">[스페셜 패키지]</div>
+                            </div>
+                            <div class="name">[1&1] 안다르 에어플라이 구스다운 재킷&토크T</div>
+                            <div class="price row">
+                                <div class="sale cell">89,000원</div>
+                                <div class="sell cell">214,000원</div>
+                            </div>
+                            <div class="icon row">
+                                <img src="https://www.andar.co.kr/web/upload/custom_265.png" alt="">
+                                <img src="https://www.andar.co.kr/web/upload/custom_269.png" alt="">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cell">
+                        <div class="box">
+                            <div class="img">
+                                <img src="https://akamai.poxo.com/andar01/andar.co.kr/web/product/tiny/201909/4fc6baf50b0f08d490dc9e52d385fccd.jpg" alt="">
+                                <div class="cover" style="background-image:url(https://akamai.poxo.com/andar01/andar.co.kr/web/product/small/201909/b7854062534a4898b9ce350fed302aa0.jpg);"></div>
+                            </div>
+                            <div class="info row">
+                                <div class="reviews cell-right">실시간리뷰 3,734</div>
+                                <div class="sig cell">[스페셜 패키지]</div>
+                            </div>
+                            <div class="name">[1&1] 안다르 에어플라이 구스다운 베스트&토크T</div>
+                            <div class="price row">
+                                <div class="sale cell">79,000원</div>
+                                <div class="sell cell">170,000원</div>
+                            </div>
+                            <div class="icon row">
+                                <img src="https://www.andar.co.kr/web/upload/custom_265.png" alt="">
+                                <img src="https://www.andar.co.kr/web/upload/custom_269.png" alt="">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cell">
+                        <div class="box">
+                            <div class="img">
+                                <img src="https://akamai.poxo.com/andar01/andar.co.kr/web/product/tiny/201910/f5bd489b609841f06df6a448bc4221a5.jpg" alt="">
+                                <div class="cover" style="background-image:url(https://akamai.poxo.com/andar01/andar.co.kr/web/product/small/201910/c76b5c63e8e7c081bee37d1028480640.jpg);"></div>
+                            </div>
+                            <div class="info row">
+                                <div class="reviews cell-right">실시간리뷰 2,434</div>
+                                <div class="sig cell">[스페셜 패키지]</div>
+                            </div>
+                            <div class="name">[1&1] 안다르 뉴롱랩 치마레깅스</div>
+                            <div class="price row">
+                                <div class="sale cell">58,000원</div>
+                                <div class="sell cell">74,000원</div>
+                            </div>
+                            <div class="icon row">
+                                <img src="https://www.andar.co.kr/web/upload/custom_265.png" alt="">
+                                <img src="https://www.andar.co.kr/web/upload/custom_269.png" alt="">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 베스트 상품 리스트 끝 -->
+            <!-- 서브 슬라이더 (아울캐러셀)-->
+            <div class="menu-box-39 con row">
+                <div class="look">
+                    <h1>이 상품 어때요?</h1>
+                </div>
+            </div>
+            <div class="menu-box-4 con row">
+                <div class="owl-carousel owl-theme con">
+                    <!-- 필수 : .owl-carousel와 .owl-theme -->
+                    <div class="item">
+                        <div class="slide-img-box-1">
+                            <img src="https://akamai.poxo.com/andar01/andar.co.kr/web/product/medium/201911/fe01df7912ed2fc1374aff4fd9686826.jpg" alt="">
+                        </div>
+                        <div class="info row">
+                            <div class="name  inline-block relative">안다르 에어웜 기모 지니 9부 블랙</div>
+                            <div class="price">
+                                <div class="sell cell">36,000원</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slide-img-box-1">
+                            <img src="https://akamai.poxo.com/andar01/andar.co.kr/web/product/medium/201910/20d22cbac80dc32072a677aba43aa0ef.jpg" alt="">
+                        </div>
+                        <div class="info row">
+                            <div class="name  inline-block relative">안다르 리버 집업재킷 딥레드</div>
+                            <div class="price">
+                                <div class="sell cell">53,000원</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slide-img-box-1">
+                            <img src="https://akamai.poxo.com/andar01/andar.co.kr/web/product/medium/201910/798072743764c33527f7361716910095.jpg" alt="">
+                        </div>
+                        <div class="info row">
+                            <div class="name  inline-block relative">안다르 리버 집업재킷 화이트</div>
+                            <div class="price">
+                                <div class="sell cell">53,000원</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slide-img-box-1">
+                            <img src="https://akamai.poxo.com/andar01/andar.co.kr/web/product/medium/201911/569c9d2392079198e5961276aa96ed9e.jpg" alt="">
+                        </div>
+                        <div class="info row">
+                            <div class="name  inline-block relative">안다르 에어웜 기모 지니 9부 모던카키</div>
+                            <div class="price">
+                                <div class="sell cell">36,000원</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slide-img-box-1">
+                            <img src="https://akamai.poxo.com/andar01/andar.co.kr/web/product/medium/201910/512b2f2cfdb97e0e1ff1497a46404ab7.jpg" alt="">
+                        </div>
+                        <div class="info row">
+                            <div class="name  inline-block relative">안다르 코듀라 NZ 집업 미드나잇</div>
+                            <div class="price">
+                                <div class="sell cell">59,000원</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slide-img-box-1">
+                            <img src="http://andar.co.kr/web/product/medium/201910/80fe21ae56e984763b3db74334676440.jpg" alt="">
+                        </div>
+                        <div class="info row">
+                            <div class="name  inline-block relative">안다르 코듀라 NZ 집업 포레스트</div>
+                            <div class="price">
+                                <div class="sell cell">59,000원</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slide-img-box-1">
+                            <img src="http://andar.co.kr/web/product/medium/201911/e22ba46c4e3801e5295a9397264eaa27.jpg" alt="">
+                        </div>
+                        <div class="info row">
+                            <div class="name  inline-block relative">안다르 팬시 롱슬리브 블랙</div>
+                            <div class="price">
+                                <div class="sell cell">39,000원</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slide-img-box-1">
+                            <img src="http://andar.co.kr/web/product/medium/201911/8d484bbc200a4337a1e484faffab74aa.jpg" alt="">
+                        </div>
+                        <div class="info row">
+                            <div class="name  inline-block relative">안다르 소프트워머 어반시크</div>
+                            <div class="price">
+                                <div class="sell cell">19,000원</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slide-img-box-1">
+                            <img src="https://akamai.poxo.com/andar01/andar.co.kr/web/product/medium/201911/6e2fd78d0f235dc2a9cab53a05e30d9f.jpg" alt="">
+                        </div>
+                        <div class="info row">
+                            <div class="name  inline-block relative">안다르 래머 롱슬리브 블랙</div>
+                            <div class="price">
+                                <div class="sell cell">29,000원</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slide-img-box-1">
+                            <img src="http://andar.co.kr/web/product/medium/20200107/2713995bc2304794ba04bd1c6ef70d86.jpg" alt="">
+                        </div>
+                        <div class="info row">
+                            <div class="name  inline-block relative">안다르 에어쿨링 스완 9부 휘바민트</div>
+                            <div class="price">
+                                <div class="sell cell">36,000원</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slide-img-box-1">
+                            <img src="http://www.andar.co.kr/web/product/medium/20200103/4842ee97c3d308165047ec6b92bc2c88.jpg" alt="">
+                        </div>
+                        <div class="info row">
+                            <div class="name  inline-block relative">안다르 서플렉스 뽀 크롭탑 팝콘옐로우</div>
+                            <div class="price">
+                                <div class="sell cell">29,000원</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slide-img-box-1">
+                            <img src="http://andar.co.kr/web/product/medium/201911/40bd61f18ddc22ec6fca29d444fa2d12.jpg" alt="">
+                        </div>
+                        <div class="info row">
+                            <div class="name  inline-block relative">안다르 스쿱 브라탑 블랙</div>
+                            <div class="price">
+                                <div class="sell cell">36,000원</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slide-img-box-1">
+                            <img src="http://www.andar.co.kr/web/product/medium/201909/3101678b136d5010a96d0b1005e860ef.jpg" alt="">
+                        </div>
+                        <div class="info row">
+                            <div class="name  inline-block relative">안다르 코듀라 클로젯 집업 피앙새블루</div>
+                            <div class="price">
+                                <div class="sell cell">78,000원</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slide-img-box-1">
+                            <img src="http://andar.co.kr/web/product/medium/201909/2c10f566c32e2ac317993dd4d9979b11.jpg" alt="">
+                        </div>
+                        <div class="info row">
+                            <div class="name  inline-block relative">안다르 논슬립 요기삭스 라벤더</div>
+                            <div class="price">
+                                <div class="sell cell">7,900원</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slide-img-box-1">
+                            <img src="http://andar.co.kr/web/product/medium/201909/ee6ad2a653528900c21510b6a5f09fe3.jpg" alt="">
+                        </div>
+                        <div class="info row">
+                            <div class="name  inline-block relative">안다르 논슬립 요기삭스 우드</div>
+                            <div class="price">
+                                <div class="sell cell">7,900원</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slide-img-box-1">
+                            <img src="http://andar.co.kr/web/product/medium/201910/efe2591a74e72b3d36ac05785e23dd8c.jpg" alt="">
+                        </div>
+                        <div class="info row">
+                            <div class="name  inline-block relative">안다르 레그워머 멜란지블랙</div>
+                            <div class="price">
+                                <div class="sell cell">19,000원</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 서브 슬라이더 (아울캐러셀) 끝-->
+
+            <div class="full-bn-box">
+                <div class="full-bn-box-1 row">
+                    <div class="cell">
+                        <div class="bn-img-box">
+                            <img src="https://www.andar.co.kr/web/andar/banner/main_contents/smallbanner/bnr_slide200108.jpg" alt="">
+                            <div class="text">
+                                <h1>
+                                    모두의 레깅스
+                                </h1>
+                                <div>
+                                    내가 내 몸을 더 좋아하게 됐는데. 좋은데?
+                                    <br> 거침없이 뻗어보자 온몸을!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="bn-img-box">
+                            <img src="https://www.andar.co.kr/web/andar/banner/main_contents/smallbanner/bnr_slide1126-1.jpg" alt="">
+                            <div class="text">
+                                <h1>
+                                    너의 스타일 스펙트럼을 넓혀봐
+                                </h1>
+                                <div>
+                                    기능성과 보온성 그리고 디자인마저 완벽한
+                                    <br> 안다르 캐주얼 컬렉션을 만나보세요.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="bn-img-box">
+                            <img src="https://www.andar.co.kr/web/andar/banner/main_contents/smallbanner/bnr_slide1028.jpg" alt="">
+                            <div class="text">
+                                <h1>
+                                    운동과 휴식이 모두 필요할 때
+                                </h1>
+                                <div>
+                                    하루에 지쳐있던 당신을 편안하게 만들어 줄
+                                    <br> 안다르 릴렉스 컬렉션을 만나보세요.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 메인 끝 -->
+    
+    <script src="index.js"></script>
+
+</body>
+
+</html>
