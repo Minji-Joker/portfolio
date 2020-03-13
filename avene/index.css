@@ -189,6 +189,14 @@ overflow-x:hidden;
 */
 
 /* 탑바 */
+.logo-bar {
+    background-color: #ff8d7a;
+    height: 5px;
+    top: 180px;
+    position: relative;
+
+}
+
 .menu-bar > div > .menu-box-1 {
     margin-top: 50px;
     z-index: 1;
@@ -196,7 +204,7 @@ overflow-x:hidden;
 
 .top-bar {
     height: 1px;
-    background-color: #ff8d7a;
+    background-color: #fff;
     padding: 3px 0;
 }
 
@@ -273,7 +281,7 @@ overflow-x:hidden;
 }
 
 .menu-bar .menu-box-1 > ul > li > .sub-menu-box-type-2 > .cell:first-child > .menu-box-2 > ul > li {
-    width: 30%;
+    width: 27.5%;
 }
 
 .menu-bar .menu-box-1 > ul > li > .sub-menu-box-type-2 > .cell:first-child > .menu-box-2 > ul > li > a {
@@ -322,8 +330,13 @@ body {
     min-height: 200vh;
 }
 
+.scroll-top-over-200 .menu-bar .menu-box-1 > ul {
+    background-color: #ff8d7a;
+}
+
 .scroll-top-over-200 .menu-bar .menu-box-1 > ul > li > a {
     padding: 0 20px;
+    color: #fff;
 }
 
 .scroll-top-over-200 .menu-bar .menu-box-1 > ul > li > a,
@@ -332,9 +345,9 @@ body {
 }
 
 .scroll-top-over-200 .menu-bar {
-    background-color: #fff;
+    background-color: #ff8d7a;
     position: fixed;
-    top: -45px;
+    top: -50px;
     left: 0;
     width: 100%;
     z-index: 100;
@@ -626,7 +639,7 @@ body {
 }
 
 #main-page-2 > .owl-carousel > .owl-stage-outer > .owl-stage > .owl-item > .item > .product-name > a {
-    color: #333333;
+    color: #fff;
     font-weight: bold;
 }
 
