@@ -374,6 +374,9 @@ a {
 .movie-comic-area {
     margin:110px;
 }
+.owl-carousel {
+    height: 447px;
+}
 .owl-item > div {
     cursor: pointer;
     margin: 7% 8%;
@@ -402,7 +405,7 @@ a {
 }
 .owl-item.center > div .small-text {
     font-size:13px;
-    color:gray;
+    color:black;
     margin-top:-17px;
 }
 
@@ -444,7 +447,7 @@ a {
 }
 .movie-comic-list-area > ul > li .small-text {
     font-size:12px;
-    color:gray;
+    color:black;
     margin-top:-17px;
 }
 .movie-comic-list-area > ul > li > .info-area {
