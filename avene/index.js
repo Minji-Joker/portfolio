@@ -1,12 +1,13 @@
 console.clear();
 
 /* 스크롤 */
-$(window).scroll(function () {
+$(window).scroll(function() {
     var scrollTop = $(window).scrollTop();
 
-    if (scrollTop >= 200) {
+    if ( scrollTop >= 200 ) {
         $('html').addClass('scroll-top-over-200');
-    } else {
+    }
+    else {
         $('html').removeClass('scroll-top-over-200');
     }
 });
@@ -35,7 +36,7 @@ function SliderK__showNext($slider) {
 }
 
 function SliderK__showPost($slider, change) {
-    if (typeof $slider.attr('data-autoplay-timeout-id') != 'undefined') {
+    if ( typeof $slider.attr('data-autoplay-timeout-id') != 'undefined' ) {
         var timeoutId = $slider.attr('data-autoplay-timeout-id') * 1;
         clearTimeout(timeoutId);
 
@@ -52,16 +53,17 @@ function SliderK__showPost($slider, change) {
     var $firstSlide = $slider.find('.slides > div:first-child');
     var $lastSlide = $slider.find('.slides > div:last-child');
 
-    if (change == 1) {
+    if ( change == 1 ) {
         $postSlide = $currentSlide.next();
 
-        if ($postSlide.length == 0) {
+        if ( $postSlide.length == 0 ) {
             $postSlide = $firstSlide;
         }
-    } else if (change == -1) {
+    }
+    else if ( change == -1 ) {
         $postSlide = $currentSlide.prev();
 
-        if ($postSlide.length == 0) {
+        if ( $postSlide.length == 0 ) {
             $postSlide = $lastSlide;
         }
     }
@@ -71,7 +73,7 @@ function SliderK__showPost($slider, change) {
 
 /* 초기화 */
 function SliderK__init() {
-    $('.slider-k').each(function (index, node) {
+    $('.slider-k').each(function(index, node) {
         var $slider = $(node);
 
         SliderK__initPageNav($slider);
@@ -87,10 +89,11 @@ function SliderK__initPageNav($slider) {
 
     var html = '';
 
-    for (var i = 0; i < slidesCount; i++) {
-        if (i == currentIndex) {
+    for ( var i = 0; i < slidesCount; i++ ) {
+        if ( i == currentIndex ) {
             html += '<div class="active"></div>';
-        } else {
+        }
+        else {
             html += '<div></div>';
         }
     }
@@ -98,19 +101,20 @@ function SliderK__initPageNav($slider) {
     html = '<div class="page-nav-box"><div class="page-nav-prev-place"></div><div class="page-nav">' + html + '</div><div class="page-nav-next-place"></div></div>';
     $slider.append(html);
 
-    $slider.find('.page-nav > div').click(function () {
+    $slider.find('.page-nav > div').click(function() {
         SliderK__show($slider, $(this).index());
     });
 }
 
 // 사이드 버튼에 이벤트를 겁니다.
 function SliderK__initSideBtns($slider) {
-    $slider.find('.side-btns > div').click(function () {
+    $slider.find('.side-btns > div').click(function() {
         var index = $(this).index();
 
-        if (index == 0) {
+        if ( index == 0 ) {
             SliderK__showPrev($slider);
-        } else {
+        }
+        else {
             SliderK__showNext($slider);
         }
     });
@@ -121,47 +125,49 @@ function SliderK__initAutoplay($slider) {
 
     $slider.attr('data-autoplay-now-work', 'Y');
 
-    if ($slider.attr('data-play-stop-button') !== 'Y') {
-        $slider.mouseenter(function () {
+    if ( $slider.attr('data-play-stop-button') !== 'Y' ) {
+        $slider.mouseenter(function() {
             $slider.attr('data-autoplay-now-work', 'N');
         });
 
-        $slider.mouseleave(function () {
+        $slider.mouseleave(function() {
             $slider.attr('data-autoplay-now-work', 'Y');
         });
-    } else {
+    }
+    else {
 
         //page-nav-next-place
 
-        if ($slider.find('.autoplay-btn-box').length == 0) {
+        if ( $slider.find('.autoplay-btn-box').length == 0 ) {
             var html = '<div class="autoplay-btn-box"><div class="btn-start-play">▶</div><div class="btn-stop-play">〓</div></div>';
             $slider.append(html);
         }
 
         var $autoplayBtnBox = $slider.find('.autoplay-btn-box');
 
-        if ($autoplayBtnBox.hasClass('into-page-nav-next-place')) {
+        if ( $autoplayBtnBox.hasClass('into-page-nav-next-place') ) {
             $autoplayBtnBox.appendTo($slider.find('.page-nav-next-place'));
         }
 
-        $slider.find('.btn-start-play').click(function () {
+        $slider.find('.btn-start-play').click(function() {
             $slider.attr('data-autoplay-now-work', 'Y');
         });
 
-        $slider.find('.btn-stop-play').click(function () {
+        $slider.find('.btn-stop-play').click(function() {
             $slider.attr('data-autoplay-now-work', 'N');
         });
     }
 
-    if (autoplay != 'Y') {
+    if ( autoplay != 'Y' ) {
         return false;
     }
 
     var autoplayInterval = $slider.attr('data-autoplay-interval');
 
-    if (typeof autoplayInterval == 'undefined') {
+    if ( typeof autoplayInterval == 'undefined' ) {
         autoplayInterval = 3000;
-    } else {
+    }
+    else {
         // 문자열을 숫자화
         autoplayInterval = autoplayInterval * 1;
     }
@@ -172,15 +178,17 @@ function SliderK__initAutoplay($slider) {
 
     $slider.attr('data-autoplay-function-id', SliderK__autoplayFunctionId);
 
-    SliderK__autoplayFunctions[SliderK__autoplayFunctionId] = function () {
+    SliderK__autoplayFunctions[SliderK__autoplayFunctionId] = function() {
         console.log(SliderK__autoplayFunctionId);
-        if ($slider.attr('data-autoplay-now-work') == 'Y') {
-            if (autoplayDirIsLeft) {
+        if ( $slider.attr('data-autoplay-now-work') == 'Y' ) {
+            if ( autoplayDirIsLeft ) {
                 SliderK__showPrev($slider);
-            } else {
+            }
+            else {
                 SliderK__showNext($slider);
             }
-        } else {
+        }
+        else {
             var timeoutId = setTimeout(SliderK__autoplayFunctions[SliderK__autoplayFunctionId], autoplayInterval);
             $slider.attr('data-autoplay-timeout-id', timeoutId);
         }
@@ -194,23 +202,23 @@ SliderK__init();
 
 /* 베스트상품 리스트 슬라이드 캐러셀 */
 $('.owl-carousel').owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: true,
-    navText: ['<i class="xi-angle-left-thin">', '<i class="xi-angle-right-thin"></img>'],
-    responsive: {
-        0: {
-            items: 1
+    loop:true,
+    margin:10,
+    nav:true,
+    navText:['<i class="xi-angle-left-thin">', '<i class="xi-angle-right-thin"></img>'],
+    responsive:{
+        0:{
+            items:1
         },
-        700: {
-            items: 3
+        700:{
+            items:3
         },
-        1000: {
-            items: 4,
-            slideBy: 4
+        1000:{
+            items:4,
+            slideBy:4
         }
     },
-    autoplay: false, // 오토 플레이 켜기
-    autoplayTimeout: 3000, // 오토 플레이 주기
-    autoplayHoverPause: true // 마우스 올리면 멈추게하기
+    autoplay:false, // 오토 플레이 켜기
+    autoplayTimeout:3000, // 오토 플레이 주기
+    autoplayHoverPause:true // 마우스 올리면 멈추게하기
 });
