@@ -2,388 +2,456 @@
 
 html {
     font-family: "Noto Sans KR", sans-serif;
-    background-color: black;
+}
+body {
+    background-image: linear-gradient(to right, #410303 0%, #d70303 100%);
 }
 
-html,
-body,
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+html, body, ul, h1 {
+    margin:0;
+    padding:0;
+    list-style:none;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+    color:inherit;
+    text-decoration:none;
 }
 
 /* 라이브러리 */
+.con {
+    margin:0 auto;
+    position:relative;
+}
+.con {
+    width:1300px;
+}
+.con-min-width {
+    min-width:1300px;
+}
+
 .row::after {
-    content: "";
-    display: block;
-    clear: both;
+    content:"";
+    display:block;
+    clear:both;
 }
 
 .cell {
-    float: left;
-    box-sizing: border-box;
+    float:left;
+    box-sizing:border-box;
 }
 
 .width-33p {
-    width: 33.3333%;
+    width:33.3333%;
 }
 
 .height-100p {
-    height: 100%;
+    height:100%;
 }
 
 .img-box > img {
-    width: 100%;
-    display: block;
+    width:100%;
+    display:block;
 }
 
 .line-height-0-ch-only {
-    line-height: 0;
+    line-height:0;
 }
 
 .line-height-0-ch-only > * {
-    line-height: normal;
+    line-height:normal;
 }
 
 /* 로고 시작 */
 .header > .logo {
-    position: absolute;
-    z-index: 100;
+    position:absolute;
+    z-index:100;
 }
-
 .header > .logo > img {
-    width: 130px;
-    margin: 10px;
+    width:130px;
+    margin:10px;
 }
-
 /* 로고 끝 */
 /* 택박스 시작 */
 .tab-box > .head > ul > li {
-    cursor: pointer;
+    cursor:pointer;
 }
 
 .tab-box > .head > ul > li.active {
-    color: red;
+    color:red;
 }
 
 .tab-box > .body > ul > li {
-    display: none;
+    display:none;
 }
 
 .tab-box > .body > ul > li.active {
-    display: block;
+    display:block;
 }
 
 /* 슬라이더 시작 */
 .main-slider {
-    position: relative;
-    height: 100vh;
-    overflow-x: hidden;
+    position:relative;
+    height:100vh;
+    overflow-x:hidden;
 }
 
 .main-slider > .slides > div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
 }
 
 .main-slider > .slides > div.active {
-    z-index: 1;
+    z-index:1;
 }
 
 .main-slider > .slides > div.before-active {
-    z-index: 0;
+    z-index:0;
 }
 
 .main-slider > .page-menu {
-    bottom: 10px;
-    left: 30px;
-    right: 50px;
-    position: absolute;
+    bottom:10px;
+    left:30px;
+    right:50px;
+    position:absolute;
     z-index: 2;
-    white-space: nowrap;
+    white-space:nowrap;
 }
 
 .main-slider > .page-menu > li {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color:rgba(0,0,0,0.3);
     transform: skewX(-30deg);
-    overflow: hidden;
-    cursor: pointer;
-    position: relative;
-    display: inline-block;
-    width: calc(100% / 8);
-    margin-right: 3px;
+    overflow:hidden;
+    cursor:pointer;
+    position:relative;
+    display:inline-block;
+    width:calc(100% / 8);
+    margin-right:3px;
 }
 
 .main-slider > .page-menu > li > a {
     display: block;
-    width: 100px;
+    width:100px;
     height: 70px;
     transform: skew(30deg);
     text-indent: -3000em;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 0 auto;
+    background-repeat:no-repeat;
+    background-position:center;
+    margin:0 auto;
 }
 
 /* 페이지메뉴 호버 */
 .main-slider > .page-menu > li:nth-child(1) > a {
-    background-size: 55%;
-    background-image: url("https://minji-joker.github.io/portfolio/web_img/marvel_symbol/iron_man_symbol.png");
+    background-size:55%;
+    background-image:url("https://minji-joker.github.io/portfolio/web_img/marvel/marvel_symbol/iron_man_symbol.png");
 }
-
 .main-slider > .page-menu > li:nth-child(2) > a {
-    background-size: 70%;
-    background-image: url("https://minji-joker.github.io/portfolio/web_img/marvel_symbol/captain_america_symbol.png");
+    background-size:70%;
+    background-image:url("https://minji-joker.github.io/portfolio/web_img/marvel/marvel_symbol/captain_america_symbol.png");
 }
-
 .main-slider > .page-menu > li:nth-child(3) > a {
-    background-size: 75%;
-    background-image: url("https://minji-joker.github.io/portfolio/web_img/marvel_symbol/thor_symbol.png");
+    background-size:75%;
+    background-image:url("https://minji-joker.github.io/portfolio/web_img/marvel/marvel_symbol/thor_symbol.png");
 }
-
 .main-slider > .page-menu > li:nth-child(4) > a {
-    background-size: 75%;
-    background-image: url("https://minji-joker.github.io/portfolio/web_img/marvel_symbol/captain_marvel_symbol.png");
+    background-size:75%;
+    background-image:url("https://minji-joker.github.io/portfolio/web_img/marvel/marvel_symbol/captain_marvel_symbol.png");
 }
-
 .main-slider > .page-menu > li:nth-child(5) > a {
-    background-size: 75%;
-    background-image: url("https://minji-joker.github.io/portfolio/web_img/marvel_symbol/black_panther_symbol.png");
+    background-size:75%;
+    background-image:url("https://minji-joker.github.io/portfolio/web_img/marvel/marvel_symbol/black_panther_symbol.png");
 }
-
 .main-slider > .page-menu > li:nth-child(6) > a {
-    background-size: 70%;
-    background-image: url("https://minji-joker.github.io/portfolio/web_img/marvel_symbol/hulk_symbol.png");
+    background-size:70%;
+    background-image:url("https://minji-joker.github.io/portfolio/web_img/marvel/marvel_symbol/hulk_symbol.png");
 }
-
 .main-slider > .page-menu > li:nth-child(7) > a {
-    background-size: 75%;
-    background-image: url("https://minji-joker.github.io/portfolio/web_img/marvel_symbol/spider_man_symbol.png");
+    background-size:75%;
+    background-image:url("https://minji-joker.github.io/portfolio/web_img/marvel/marvel_symbol/spider_man_symbol.png");
 }
-
 .main-slider > .page-menu > li:nth-child(8) > a {
-    background-size: 70%;
-    background-image: url("https://minji-joker.github.io/portfolio/web_img/marvel_symbol/black_widow_symbol.png");
+    background-size:70%;
+    background-image:url("https://minji-joker.github.io/portfolio/web_img/marvel/marvel_symbol/black_widow_symbol.png");
 }
 
-.main-slider > .page-menu > li:nth-child(1):hover,
-.main-slider > .page-menu > li:nth-child(1).active {
-    background-color: white;
+.main-slider > .page-menu > li:nth-child(1):hover, .main-slider > .page-menu > li:nth-child(1).active {
+    background-color:white;
 }
 
-.main-slider > .page-menu > li:nth-child(1):hover > a,
-.main-slider > .page-menu > li:nth-child(1).active > a {
-    background-image: url("https://minji-joker.github.io/portfolio/web_img/marvel_logo_img/iron_man_logo.png");
+.main-slider > .page-menu > li:nth-child(1):hover > a, .main-slider > .page-menu > li:nth-child(1).active > a {
+    background-image:url("https://minji-joker.github.io/portfolio/web_img/marvel/marvel_logo_img/iron_man_logo.png");
 }
 
-.main-slider > .page-menu > li:nth-child(2):hover,
-.main-slider > .page-menu > li:nth-child(2).active {
-    background-color: #9e3131;
+.main-slider > .page-menu > li:nth-child(2):hover, .main-slider > .page-menu > li:nth-child(2).active {
+    background-color:#9e3131;
 }
 
-.main-slider > .page-menu > li:nth-child(2):hover > a,
-.main-slider > .page-menu > li:nth-child(2).active > a {
-    background-image: url("https://minji-joker.github.io/portfolio/web_img/marvel_logo_img/captain_america_logo.png");
+.main-slider > .page-menu > li:nth-child(2):hover > a, .main-slider > .page-menu > li:nth-child(2).active > a {
+    background-image:url("https://minji-joker.github.io/portfolio/web_img/marvel/marvel_logo_img/captain_america_logo.png");
 }
 
-.main-slider > .page-menu > li:nth-child(3):hover,
-.main-slider > .page-menu > li:nth-child(3).active {
-    background-color: #3a2e44;
+.main-slider > .page-menu > li:nth-child(3):hover, .main-slider > .page-menu > li:nth-child(3).active {
+    background-color:#3a2e44;
 }
 
-.main-slider > .page-menu > li:nth-child(3):hover > a,
-.main-slider > .page-menu > li:nth-child(3).active > a {
-    background-image: url("https://minji-joker.github.io/portfolio/web_img/marvel_logo_img/thor_logo.png");
+.main-slider > .page-menu > li:nth-child(3):hover > a, .main-slider > .page-menu > li:nth-child(3).active > a {
+    background-image:url("https://minji-joker.github.io/portfolio/web_img/marvel/marvel_logo_img/thor_logo.png");
 }
 
-.main-slider > .page-menu > li:nth-child(4):hover,
-.main-slider > .page-menu > li:nth-child(4).active {
-    background-color: #032a6b;
+.main-slider > .page-menu > li:nth-child(4):hover, .main-slider > .page-menu > li:nth-child(4).active {
+    background-color:#032a6b;
 }
 
-.main-slider > .page-menu > li:nth-child(4):hover > a,
-.main-slider > .page-menu > li:nth-child(4).active > a {
-    background-image: url("https://minji-joker.github.io/portfolio/web_img/marvel_logo_img/captain_marvel_logo.png");
+.main-slider > .page-menu > li:nth-child(4):hover > a, .main-slider > .page-menu > li:nth-child(4).active > a {
+    background-image:url("https://minji-joker.github.io/portfolio/web_img/marvel/marvel_logo_img/captain_marvel_logo.png");
 }
 
-.main-slider > .page-menu > li:nth-child(5):hover,
-.main-slider > .page-menu > li:nth-child(5).active {
-    background-color: #7099e3;
+.main-slider > .page-menu > li:nth-child(5):hover, .main-slider > .page-menu > li:nth-child(5).active {
+    background-color:#7099e3;
 }
 
-.main-slider > .page-menu > li:nth-child(5):hover > a,
-.main-slider > .page-menu > li:nth-child(5).active > a {
-    background-image: url("https://minji-joker.github.io/portfolio/web_img/marvel_logo_img/black_panther_logo.png");
+.main-slider > .page-menu > li:nth-child(5):hover > a, .main-slider > .page-menu > li:nth-child(5).active > a {
+    background-image:url("https://minji-joker.github.io/portfolio/web_img/marvel/marvel_logo_img/black_panther_logo.png");
 }
 
-.main-slider > .page-menu > li:nth-child(6):hover,
-.main-slider > .page-menu > li:nth-child(6).active {
-    background-color: gray;
+.main-slider > .page-menu > li:nth-child(6):hover, .main-slider > .page-menu > li:nth-child(6).active {
+    background-color:gray;
 }
 
-.main-slider > .page-menu > li:nth-child(6):hover > a,
-.main-slider > .page-menu > li:nth-child(6).active > a {
-    background-image: url("https://minji-joker.github.io/portfolio/web_img/marvel_logo_img/hulk_logo.png");
+.main-slider > .page-menu > li:nth-child(6):hover > a, .main-slider > .page-menu > li:nth-child(6).active > a {
+    background-image:url("https://minji-joker.github.io/portfolio/web_img/marvel/marvel_logo_img/hulk_logo.png");
 }
 
-.main-slider > .page-menu > li:nth-child(7):hover,
-.main-slider > .page-menu > li:nth-child(7).active {
-    background-color: black;
+.main-slider > .page-menu > li:nth-child(7):hover, .main-slider > .page-menu > li:nth-child(7).active {
+    background-color:black;
 }
 
-.main-slider > .page-menu > li:nth-child(7):hover > a,
-.main-slider > .page-menu > li:nth-child(7).active > a {
-    background-image: url("https://minji-joker.github.io/portfolio/web_img/marvel_logo_img/spider_man_logo.png");
+.main-slider > .page-menu > li:nth-child(7):hover > a, .main-slider > .page-menu > li:nth-child(7).active > a {
+    background-image:url("https://minji-joker.github.io/portfolio/web_img/marvel/marvel_logo_img/spider_man_logo.png");
 }
 
-.main-slider > .page-menu > li:nth-child(8):hover,
-.main-slider > .page-menu > li:nth-child(8).active {
-    background-color: #ef2825;
+.main-slider > .page-menu > li:nth-child(8):hover, .main-slider > .page-menu > li:nth-child(8).active {
+    background-color:#ef2825;
 }
 
-.main-slider > .page-menu > li:nth-child(8):hover > a,
-.main-slider > .page-menu > li:nth-child(8).active > a {
-    background-image: url("https://minji-joker.github.io/portfolio/web_img/marvel_logo_img/black_widow_logo.png");
+.main-slider > .page-menu > li:nth-child(8):hover > a, .main-slider > .page-menu > li:nth-child(8).active > a {
+    background-image:url("https://minji-joker.github.io/portfolio/web_img/marvel/marvel_logo_img/black_widow_logo.png");
 }
 
-.main-slider > .page-menu > li:hover > a,
-.main-slider > .page-menu > li.active > a {
-    background-size: 100%;
+.main-slider > .page-menu > li:hover > a, .main-slider > .page-menu > li.active > a {
+    background-size:100%;
 }
 
-@media(max-width:1000px) {
+@media( max-width:1000px ) {
     .main-slider > .page-menu > li > a {
-        width: 80px;
+        width:80px;
         height: 70px;
     }
 }
 
-@media(max-width:700px) {
+@media( max-width:700px ) {
     .main-slider > .page-menu > li > a {
-        width: 50px;
+        width:50px;
         height: 70px;
     }
 
-    .main-slider > .page-menu > li:hover > a,
-    .main-slider > .page-menu > li.active > a {
-        background-size: 120%;
+    .main-slider > .page-menu > li:hover > a, .main-slider > .page-menu > li.active > a {
+        background-size:120%;
     }
 
-    .main-slider > .page-menu > li:nth-child(1):hover > a,
-    .main-slider > .page-menu > li:nth-child(1).active > a {
-        background-size: 100%;
+    .main-slider > .page-menu > li:nth-child(1):hover > a, .main-slider > .page-menu > li:nth-child(1).active > a {
+        background-size:100%;
     }
 }
-
 /* 페이지메뉴 호버 끝 */
 
 .main-slider > .slides > div.active {
-    left: 0;
+    left:0;
 }
 
 .main-slider > .nav-btns > div {
-    margin: 0 20px;
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background-color: black;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    z-index: 2;
+    margin:0 20px;
+    position:absolute;
+    width:100px;
+    height:100px;
+    background-color:black;
+    border-radius:50%;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    z-index:2;
 }
 
 .main-slider > .nav-btns > div:last-child {
-    left: auto;
-    right: 0;
+    left:auto;
+    right:0;
 }
 
 .main-slider > .nav-btns > div > span {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    color: white;
-    font-weight: bold;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translateX(-50%) translateY(-50%);
+    color:white;
+    font-weight:bold;
 }
 
 /* 상품박스 시작 */
 .prod-box > .tab-box > .head > ul > li {
-    display: inline-block;
+    display:inline-block;
 }
 
 /* 슬라이더 1 시작 */
 .slider-1 {
-    overflow: hidden;
+    overflow:hidden;
 }
 
-.slider-1 > .page-menu {}
+.slider-1 > .page-menu {
+
+}
 
 .slider-1 > .nav-btns {
-    display: none;
+    display:none;
 }
 
 .slider-1 > .slides > div > .bg-img {
-    position: absolute;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    top: 0;
-    left: -70px;
-    width: calc(100% + 70px);
-    height: 100%;
-    transition: left 0.3s 1s;
+    position:absolute;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    top:0;
+    left:-70px;
+    width:calc(100% + 70px);
+    height:100%;
+    transition:left 0.3s 1s;
 }
 
 .slider-1 > .slides > div.active > .bg-img {
-    left: 0;
-    transition: left .5s ease-out .5s;
+    left:0;
+    transition:left .5s ease-out .5s;
 }
 
 .slider-1 > .slides > div > .bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
 }
 
 .slider-1 > .slides > div > .bg-video > video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
 
 }
 
 /* 메인로고 시작 */
 .slider-1 > .slides > div > .main-logo {
-    width: 450px;
-    position: absolute;
-    top: 50%;
-    transform: translatey(-50%);
-    left: -100px;
-    width: calc(600px + 100px);
-    transition: left 0.3s 1s;
-    margin-left: 20px;
+    width:450px;
+    position:absolute;
+    top:50%;
+    transform:translatey(-50%);
+    left:-100px;
+    width:calc(600px + 100px);
+    transition:left 0.3s 1s;
+    margin-left:20px;
 }
-
 .slider-1 > .slides > div.active > .main-logo {
-    left: 0;
-    transition: left .5s ease-out .5s;
+    left:0;
+    transition:left .5s ease-out .5s;
+}
+/* 메인로고 끝 */
+
+/* 무비영역 시작 */
+.movie-comic-area {
+    margin:110px;
+}
+.owl-item > div {
+    cursor: pointer;
+    margin: 7% 8%;
+    transition: margin 0.4s ease;
+    font-family: 'Oswald', sans-serif;
+
+}
+.owl-item.center > div {
+    cursor: auto;
+    margin: 0;
+}
+.owl-item:not(.center) > div:hover {
+    opacity: .75;
+}
+.owl-item > div > img {
+    box-shadow:0 7px 17px -8px rgba(0,0,0,.8);
 }
 
-/* 메인로고 끝 */
+.owl-item.center > div > span {
+    padding-top:7px;
+    text-align:center;
+    display:block;
+    font-weight:500;
+    letter-spacing:.6px;
+
+}
+.owl-item.center > div .small-text {
+    font-size:13px;
+    color:gray;
+    margin-top:-17px;
+}
+
+.movie-comic-area > h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size:3.5em;
+    text-align:center;
+    display:table;
+    margin:0 auto;
+    padding:0 7px;
+
+}
+/* 무비 리스트 */
+.movie-comic-list-area {
+    font-family: 'Oswald', sans-serif;
+    font-weight:500;
+    position:relative;   
+    
+}
+.movie-comic-list-area > ul > li > a > img {
+    width:190px;
+    box-shadow:0 7px 20px -8px rgba(0,0,0,.8);
+}
+.movie-comic-list-area > ul > li:hover > a > img {
+    transition: all .17s ease-in-out;
+    transform: translate3d(0,-2%,0);
+} 
+.movie-comic-list-area > ul > li {
+    padding:20px 10px;
+    position:relative;
+    overflow: hidden;
+    
+}
+.movie-comic-list-area > ul > li:hover span.main-text {
+    color:red;
+}
+.movie-comic-list-area > ul > li .main-text {
+    
+}
+.movie-comic-list-area > ul > li .small-text {
+    font-size:12px;
+    color:gray;
+    margin-top:-17px;
+}
+.movie-comic-list-area > ul > li > .info-area {
+    width:190px;
+    height:50px;
+}
+
+
+/* 무비영역 끝 */
+/* 코믹영역 시작 */
