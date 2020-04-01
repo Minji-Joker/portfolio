@@ -1,0 +1,564 @@
+/*  폰트 적용 */
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+html,
+body {
+    /*background-image:url(https://minji-joker.github.io/portfolio/web_img/mj_portfolio/main_bg.png);*/
+    background-color: ivory;
+}
+
+html {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 노말라이즈 */
+body,
+ul,
+li,
+h1 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 라이브러리 */
+.con {
+    margin: 0 auto;
+}
+
+.img-box > img {
+    width: 100%;
+    display: block;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.cell {
+    float: left;
+    box-sizing: border-box;
+}
+
+.cell-right {
+    float: right;
+    box-sizing: border-box;
+}
+
+.margin-0-auto {
+    margin: 0 auto;
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.line-height-0-ch-only {
+    line-height: 0;
+}
+
+.line-height-0-ch-only > * {
+    line-height: normal;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute-left {
+    position: absolute;
+    left: 0;
+}
+
+.absolute-right {
+    position: absolute;
+    right: 0;
+}
+
+.absolute-middle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.width-100p {
+    width: 100%;
+}
+
+.table {
+    display: table;
+}
+
+.table-cell {
+    display: table-cell;
+}
+
+.vertical-align-top {
+    vertical-align: top;
+}
+
+.vertical-align-middle {
+    vertical-align: middle;
+}
+
+.vertical-align-bottom {
+    vertical-align: bottom;
+}
+
+/* 커스텀 */
+
+.con {
+    width: 1600px;
+}
+
+.con-min-width {
+    min-width: 1600px;
+}
+
+/* 반응형 레이아웃 */
+/*
+.con {
+max-width:1150px;
+}
+
+.con-min-width {
+min-width:320px;
+}
+
+html, body {
+overflow-x:hidden;
+}
+*/
+
+.pagination {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.pagination a {
+    display: block;
+    color: #272c85;
+    position: relative;
+    padding: 20px;
+}
+
+.pagination a.active:after {
+    box-shadow: inset 0 0 0 10px;
+    color: yellow;
+}
+
+.pagination a .hover-text {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding-right: 15px;
+    white-space: nowrap;
+}
+
+.pagination a:hover .hover-text {
+    opacity: 1;
+}
+
+.pagination a:after {
+    content: "";
+    transition: box-shadow 0.5s ease;
+    width: 6px;
+    height: 6px;
+    display: block;
+    border: 1px solid;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: inset 0 0 0 10px;
+}
+
+/* 스크롤다운 버튼 */
+#section05 a span {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #272c85;
+    border-bottom: 1px solid #272c85;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb05 1.5s infinite;
+    animation: sdb05 1.5s infinite;
+    box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb05 {
+    0% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+    }
+}
+
+@keyframes sdb05 {
+    0% {
+        transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+    }
+}
+
+/* 메인 배경 */
+.main-bg {}
+
+/* 메인 텍스트 */
+.home > .contact > img {
+    width: 230px;
+}
+
+.home .content {
+    text-align: center;
+    color: #272c85;
+    padding-top: 80px;
+}
+
+.home .content > .name {
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 4rem;
+}
+
+.home .content > .portfolio {
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+.home .content > .two {
+    display: inline-block;
+    width: 600px;
+    position: relative;
+}
+
+.home .content > .two::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #272c85;
+    height: 4px;
+    width: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 90px;
+}
+
+.home .content > .two > .txt {
+    font-size: 35px;
+    font-weight: bold;
+    text-align: right;
+    line-height: 5px;
+}
+
+/* 프로필 페이지 시작 */
+.panel1 > .mark > img {
+    width: 150px;
+}
+
+.panel1 > .profile-page .profile {
+    position: relative;
+    padding: 100px 150px 0 150px;
+
+}
+
+.panel1 > .profile-page .profile > img {
+    width: 300px;
+}
+
+.panel1 > .profile-page .c-design > img {
+    width: 230px;
+    margin-left: 40px;
+}
+
+/* 프로필 내 소개*/
+.panel1 > .profile-page .profile > .info {
+    color: #272c85;
+    line-height: 27px;
+}
+
+.panel1 > .profile-page .profile > .info-1 {
+    font-weight: bold;
+    position: relative;
+}
+
+.panel1 > .profile-page .profile > .info-1 > .name {
+    letter-spacing: 60px;
+}
+
+.panel1 > .profile-page .profile > .info-1 > .birth {
+    letter-spacing: 10px;
+}
+
+.panel1 > .profile-page .profile > .info-1 > .e-mail {
+    letter-spacing: 23px;
+}
+
+.panel1 > .profile-page .profile .info-2 > .name {
+    letter-spacing: 49px;
+}
+
+.panel1 > .profile-page .profile .info-2 > .birth {
+    letter-spacing: 7px;
+}
+
+.panel1 > .profile-page .profile .info-2 > .e-mail {
+    letter-spacing: -1px;
+}
+
+/* 프로필 오른쪽 */
+.panel1 > .profile-page .info-3 {
+    color: #272c85;
+    position: relative;
+    padding: 100px 10px 0 0;
+    width: 780px;
+}
+
+.panel1 > .profile-page .info-3 > .education > .line::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #272c85;
+    height: 4px;
+    width: 640px;
+    top: 23%;
+    right: 10px;
+}
+
+.panel1 > .profile-page .info-3 > .skill {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.panel1 > .profile-page .info-3 > .skill > .skill-img-box {
+    position: relative;
+}
+
+.panel1 > .profile-page .info-3 > .skill > .skill-img-box > img {
+    width: 110px;
+    position: absolute;
+    right: 0;
+    top: -116px;
+}
+
+.panel1 > .profile-page .info-3 > .skill > .line::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #272c85;
+    height: 4px;
+    width: 640px;
+    top: 45%;
+    right: 10px;
+}
+
+.panel1 > .profile-page .info-3 > .like > .line-2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #272c85;
+    height: 4px;
+    width: 140px;
+    top: 82%;
+    left: auto;
+    right: 10px;
+}
+
+.panel1 > .profile-page .info-3 > .hate > .line-2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #272c85;
+    height: 4px;
+    width: 140px;
+    top: 10%;
+    left: auto;
+    right: 0;
+}
+
+.panel1 > .profile-page .info-3 .line {
+    font-weight: bold;
+}
+
+.panel1 > .profile-page .info-3 .right {
+    text-align: right;
+}
+
+.panel1 > .profile-page .info-3 > .skill > div.my-skill {
+    position: relative;
+    right: 16%;
+    text-align: right;
+}
+
+.panel1 > .profile-page .info-3 .line-2 {
+    font-weight: bold;
+}
+
+.panel1 > .profile-page .info-3 .hate {
+    position: absolute;
+}
+
+
+
+/* 웹디자인 페이지 시작 */
+.panel2 > .mark > img {
+    width: 220px;
+    padding: 25px 0;
+    margin-left: -10px;
+}
+
+.panel2 .design .imac > img {
+    width: 360px;
+}
+
+.panel2 .design .imac {
+    padding: 0 50px 10px 100px;
+    position: relative;
+}
+
+.design {
+    position: relative;
+}
+
+.design .web {
+    width: 336px;
+    height: 205px;
+    position: absolute;
+    top: 40px;
+    left: 110px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center top;
+    transition: background-position 5s;
+}
+
+.design .web:hover {
+    background-position: center bottom;
+}
+
+/* 작업 리스트 내부 텍스트 */
+.hover-txt-box {
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+    pointer-events: none;
+    font-size: 13px;
+    border-radius: 4px;
+}
+
+.design .web:hover .hover-txt-box {
+    visibility: visible;
+}
+
+.hover-txt-box > h1 {
+    font-size: 1rem;
+}
+
+/* 그래픽디자인 페이지 시작 */
+.panel3 > .mark > img {
+    width: 260px;
+    padding: 20px 0 0 10px;
+}
+
+/* 푸터 시작 */
+.footer {
+    background-color: #272c85;
+}
+
+.footer > .thankyou-txt {
+    text-align: center;
+    padding-top: 150px;
+}
+
+.footer > .thankyou-txt > h1 {
+    font-family: 'Nothing You Could Do', cursive;
+    color: ivory;
+    font-size: 5rem;
+}
+
+.footer > .thankyou-txt > h2 {
+    color: ivory;
+}
+
+.footer > .contact {
+    color: ivory;
+}
+
+.footer > .contact .xi-call,
+.footer > .contact .xi-mail {
+    font-size: 20px;
+    position: relative;
+}
+
+.footer > .contact {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translatex(-50%);
+    color: ivory;
+    display: inline-block;
+    padding: 10px;
+}
+
+.footer > .contact > ul > li {
+    margin-right: 25px;
+}
+
+.footer > .contact > ul > li > a > h5 {
+    display: inline-block;
+}
