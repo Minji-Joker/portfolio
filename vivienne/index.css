@@ -1,0 +1,809 @@
+/* 폰트 적용 */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400&display=swap&subset=korean');
+
+html {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 노말라이즈 */
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    word-break: keep-all;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    overflow-x: hidden;
+    line-height: 1.15;
+}
+
+/* 라이브러리 */
+.wrap {
+    width: 1310px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.con {
+    width: 1150px;
+    margin: 0 auto;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.cell {
+    float: left;
+    box-sizing: border-box;
+}
+
+.cell-right {
+    float: right;
+}
+
+.line-height-0 {
+    line-height: 0;
+}
+
+.line-height-0 > * {
+    line-height: normal;
+}
+
+.visible-on {
+    display: block;
+}
+
+.visible-off {
+    display: none;
+}
+
+.img-box {
+    overflow: hidden;
+}
+
+.img-box > img {
+    width: 100%;
+    display: block;
+}
+
+/* 사이드 바 */
+.quick {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 57px;
+    font-size: 12px;
+    text-align: center;
+    color: #2e2e2e;
+    margin-top: 150px;
+}
+
+.quick > div:nth-child(1),
+.quick > div:nth-child(2) {
+    padding-bottom: 8px;
+}
+
+.quick > .basket-list {
+    padding: 8px 0 6px;
+}
+
+.quick > .basket-list > a {
+    margin-left: 3px;
+    font-weight: bold;
+}
+
+.quick > .basket-list > a:hover {
+    text-decoration: underline;
+}
+
+.quick > .recently-list > a {
+    display: block;
+    white-space: nowrap;
+    line-height: 25px;
+    letter-spacing: -1px;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.quick > .recently-list > a:hover {
+    text-decoration: underline;
+}
+
+.quick > .recently-list > ul {
+    padding: 5px 0;
+}
+
+.quick > .recently-list > ul > li:first-child {
+    padding-bottom: 3px;
+}
+
+.quick > .recently-list > ul > li > a > img {
+    width: 50px;
+}
+
+.quick > .more {
+    padding-top: 6px;
+}
+
+.quick > .recently-list > .recently-btns > img {
+    border-bottom: 1px solid #e4e4e4;
+    cursor: pointer;
+}
+
+/* 헤더 */
+.header {
+    background-color: #222;
+    color: #fff;
+    height: 32px;
+}
+
+.header > .top-bar > ul > li > a {
+    display: block;
+    font-size: 12px;
+    padding: 0 4px 0 10px;
+    line-height: 32px;
+}
+
+.header > .top-bar > ul > li > a:hover {
+    color: #ddd;
+}
+
+.header > .top-bar > ul > li > a.my-shop::after {
+    content: "♥";
+    color: red;
+    padding-left: 3px;
+}
+
+/* 좌측 메뉴바 */
+.top-area {
+    position: relative;
+    text-align: center;
+}
+
+.top-area > .menu-1 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.top-area > .menu-1 > ul > li > a {
+    display: block;
+    padding: 0 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: gray;
+    position: relative;
+}
+
+.top-area > .menu-1 > ul > li > a:hover {
+    color: #000;
+}
+
+.top-area > .menu-1 > ul > li:not(:only-child) > a::after {
+    content: "";
+    background-color: gray;
+    position: absolute;
+    top: 4px;
+    right: 0;
+    width: 1px;
+    height: 10px;
+}
+
+.top-area > .search-box {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+}
+
+.top-area > .search-box > input {
+    width: 220px;
+    height: 30px;
+}
+
+.top-area > .search-box > span {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+/* 상단 메뉴 */
+.top-menu-bar > .menu-1 {
+    text-align: center;
+    border-top: 3px solid #000;
+}
+
+.top-menu-bar > .menu-1 > ul {
+    margin: 0 30px;
+    display: inline-block;
+}
+
+.top-menu-bar > .menu-1 ul > li > a {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 17px;
+}
+
+.top-menu-bar > .menu-1 ul > li > a:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+/* 2차 메뉴 */
+.top-menu-bar > .menu-1 ul > li {
+    position: relative;
+    z-index: 100;
+}
+
+.top-menu-bar > .menu-1 > ul ul {
+    display: none;
+    text-align: left;
+    width: 150px;
+    border: 1px solid #000;
+    position: absolute;
+    top: calc(100% + 5px);
+    background-color: #fff;
+}
+
+.top-menu-bar > .menu-1 > ul ul::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    bottom: 100%;
+}
+
+.top-menu-bar > .menu-1 > ul ul::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: -4px;
+    left: 10px;
+    transform: rotate(45deg);
+    background-color: #000;
+    z-index: -1;
+}
+
+.top-menu-bar > .menu-1 > ul > li:hover ul {
+    display: block;
+}
+
+.top-menu-bar > .menu-1 > ul ul > li > a {
+    font-size: 11px;
+    font-weight: normal;
+    padding: 10px 5px;
+}
+
+.top-menu-bar > .menu-1 > ul ul > li:not(:last-child) {
+    border-bottom: 1px solid #aaa;
+}
+
+/* 상단 배너바 */
+.top-bn-bar {
+    margin-top: 5px;
+}
+
+.top-bn-bar > .cell {
+    height: 456px;
+}
+
+.top-bn-bar > .cell:nth-child(1) {
+    width: 221px;
+}
+
+.top-bn-bar > .cell:nth-child(2) {
+    width: 595px;
+    margin: 0 12px;
+}
+
+.top-bn-bar > .cell:nth-child(3) {
+    width: 310px;
+}
+
+.top-bn-bar .article-list {
+    margin-top: 12px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.top-bn-bar .article-list > ul > li > a {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    color: #555;
+    padding: 5.2px;
+}
+
+.top-bn-bar .article-list > ul > li:hover > a {
+    color: #111;
+}
+
+/* 슬라이더 */
+.top-bn-bar > .cell > .slider-1 {
+    position: relative;
+    height: 456px;
+    user-select: none;
+}
+
+.top-bn-bar > .cell > .slider > .slides > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.top-bn-bar > .cell > .slider > .slides > a.active {
+    opacity: 1;
+}
+
+.top-bn-bar > .cell > .slider > .slides > a > .bn-text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 13px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, .3);
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.top-bn-bar > .cell > .slider-1 > .page-btns {
+    position: absolute;
+    right: 10px;
+    bottom: 7px;
+}
+
+.top-bn-bar > .cell > .slider-1 > .page-btns > div {
+    width: 13px;
+    height: 13px;
+    background: url('https://kimyang-sun.github.io/pf-img/vivienne-img/sfix-ico.png') no-repeat 0 0;
+    display: inline-block;
+    border-radius: 100%;
+    cursor: pointer;
+    margin-right: 3px;
+}
+
+.top-bn-bar > .cell > .slider-1 > .page-btns > div.active {
+    background: url('https://kimyang-sun.github.io/pf-img/vivienne-img/sfix-ico.png') no-repeat -23px 0;
+}
+
+.top-bn-bar > .cell > .slider-1 > .side-btns > div {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translatey(-50%);
+    background-color: rgba(0, 0, 0, .5);
+    padding: 15px 20px;
+    border-radius: 0 50% 50% 0;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.top-bn-bar > .cell > .slider-1:hover > .side-btns > div {
+    opacity: 1;
+}
+
+.top-bn-bar > .cell > .slider-1 > .side-btns > div:last-child {
+    left: auto;
+    right: 0;
+    border-radius: 50% 0 0 50%;
+}
+
+.top-bn-bar > .cell > .slider-1 > .side-btns > div:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.top-bn-bar > .cell > .slider-1 > .side-btns > div > span {
+    font-size: 30px;
+    color: #ddd;
+}
+
+.top-bn-bar > .cell > .slider-2-title > a {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.top-bn-bar > .cell > .slider-2 {
+    max-width: 310px;
+    margin: 0 auto;
+}
+
+.top-bn-bar > .cell > .slider-2 > .owl-carousel > .owl-stage-outer > .owl-stage > .owl-item > .item {
+    height: auto;
+}
+
+.top-bn-bar > .cell > .slider-2 > .owl-carousel > .owl-stage-outer > .owl-stage > .owl-item:nth-child(even) > .item {
+    background-color: #c0c0c0;
+}
+
+.top-bn-bar > .cell > .slider-2 > .owl-carousel > .owl-nav > .owl-prev,
+.top-bn-bar > .cell > .slider-2 > .owl-carousel > .owl-nav > .owl-next {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+.top-bn-bar > .cell > .slider-2 > .owl-carousel > .owl-nav > .owl-next {
+    left: auto;
+    right: 0;
+}
+
+.top-bn-bar > .cell > .slider-2 > .owl-carousel > .owl-nav > .owl-prev:hover,
+.slider-2 > .owl-carousel > .owl-nav > .owl-next:hover {
+    background-color: transparent;
+}
+
+.top-bn-bar > .cell > .slider-2 > .owl-carousel > .owl-dots {
+    display: none;
+}
+
+/* 베스트 아이템 */
+.item-con {
+    margin-top: 45px;
+    margin-bottom: 25px;
+}
+
+.item-con:first-child {
+    height: 540px;
+}
+
+.item-con > .item-title {
+    text-align: center;
+    font-size: 20px;
+    line-height: 52px;
+    position: relative;
+    letter-spacing: 6px;
+}
+
+.item-con:nth-child(1) > .item-title {
+    border-top: 3px solid #000;
+}
+
+.item-con > .item-title::after {
+    content: "";
+    padding: 1px;
+    border-top: 1px dotted #000;
+    border-bottom: 1px dotted #000;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.item-con > .item-menu {
+    text-align: center;
+}
+
+.item-con > .item-menu > ul {
+    display: inline-block;
+}
+
+.item-con > .item-menu > ul > li {
+    width: 160px;
+    height: 68px;
+    padding-top: 13px;
+    position: relative;
+}
+
+.item-con > .item-menu > ul > li > a {
+    display: block;
+    font-size: 12px;
+    color: #cfcfcf;
+}
+
+.item-con > .item-menu > ul > li.active::before,
+.item-con > .item-menu > ul > li.active::after {
+    content: "";
+    background-color: #000;
+    display: block;
+    position: absolute;
+}
+
+.item-con > .item-menu > ul > li.active::before {
+    width: 100%;
+    height: 4px;
+    bottom: 100%;
+    left: 0;
+}
+
+.item-con > .item-menu > ul > li.active::after {
+    width: 5px;
+    height: 5px;
+    top: -2px;
+    left: 50%;
+    transform: translatex(-50%) rotate(45deg);
+}
+
+.item-con > .item-menu > ul > li:hover > a {
+    color: #000;
+}
+
+.item-con > .item-list {
+    text-align: center;
+}
+
+.item-con > .best-item-list {
+    display: none;
+}
+
+.item-con > .best-item-list.active {
+    display: block;
+}
+
+.item-con > .item-list > ul {
+    display: inline-block;
+}
+
+.item-con > .item-list > ul > li {
+    width: 256px;
+    margin: 0 10px;
+    text-align: left;
+}
+
+.item-con > .item-list > ul > li > a > img {
+    border: 1px solid #ddd;
+}
+
+.item-con > .item-list > ul > li > .item-name {
+    padding: 12px 0;
+    border-bottom: 1px dotted #777;
+}
+
+.item-con > .item-list > ul > li > .item-name > a {
+    font-size: 13px;
+    color: #555;
+}
+
+.item-con > .item-list > ul > li > .item-name > a:hover {
+    text-decoration: underline;
+}
+
+.item-con > .item-list > ul > li > .item-name > img {
+    position: relative;
+    top: 3px;
+}
+
+.item-con > .item-list > ul > li > .item-price {
+    padding-top: 10px;
+}
+
+.item-list > ul > li > .item-price > div {
+    margin-bottom: 3px;
+}
+
+.item-con > .item-list > ul > li > .item-price > .point {
+    font-size: 13px;
+    color: #555;
+}
+
+.item-con > .item-list > ul > li > .item-price > .point::before {
+    content: "";
+    background: url('https://kimyang-sun.github.io/pf-img/vivienne-img/ico_product_point.gif') no-repeat center center;
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.item-con > .item-list > ul > li > .item-price > .point > span {
+    padding-left: 5px;
+}
+
+.item-con > .item-list > ul > li > .item-price > .prev-price {
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
+.item-con > .item-list > ul > li > .item-price > .next-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+}
+
+.prod-con > .item-title {
+    font-size: 24px;
+    letter-spacing: 4px;
+}
+
+.prod-con > .item-list > ul > li {
+    padding-top: 25px;
+}
+
+.prod-con > .item-list > ul > li:nth-child(4n + 1) {
+    clear: both;
+}
+
+/* 푸터 */
+.footer {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.footer > .footer-bn {
+    border-top: 2px solid #000;
+}
+
+.footer > .footer-bn > ul > li {
+    width: 25%;
+    padding: 25px 0 0 25px;
+    height: 167px;
+    position: relative;
+}
+
+.footer > .footer-bn > ul > li:nth-child(1)::after,
+.footer > .footer-bn > ul > li:nth-child(2)::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 75%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translatey(-50%);
+    background-color: #dfdfdf;
+}
+
+.footer > .footer-bn > ul > li > ul > li {
+    padding: 5px 0;
+}
+
+.footer > .footer-bn > ul > li > ul > li.title {
+    font-size: 13px;
+    font-weight: bold;
+    color: #000;
+}
+
+.footer > .footer-bn > ul > li:nth-child(1) > ul > li.tell {
+    font-size: 28px;
+    letter-spacing: 2px;
+    padding: 3px 0;
+}
+
+.footer > .footer-bn > ul > li:nth-child(1) > ul > li.desc {
+    font-size: 11px;
+    color: #afafaf;
+    line-height: 15px;
+}
+
+.footer > .footer-bn > ul > li:nth-child(2) > ul > li.logo-tell,
+.footer > .footer-bn > ul > li:nth-child(2) > ul > li.account-holder {
+    font-size: 12.5px;
+    color: #808080;
+}
+
+.footer > .footer-bn > ul > li:nth-child(2) > ul > li.logo-tell > img {
+    width: 15px;
+    position: relative;
+    top: 2px;
+    padding-right: 5px;
+}
+
+.footer > .footer-bn > ul > li:nth-child(2) > ul > li.logo-tell > span {
+    font-size: 16px;
+    color: #000;
+    padding-left: 5px;
+}
+
+.footer > .footer-bn > ul > li:nth-child(2) > ul > li.account-holder {
+    padding-left: 20px;
+}
+
+.footer > .footer-bn > ul > li:nth-child(3) > ul > li:not(:first-child) {
+    padding: 8px 0 0;
+}
+
+.footer > .footer-bn > ul > li:nth-child(3) > ul > li > a {
+    font-size: 12px;
+    color: #666;
+    display: block;
+}
+
+.footer > .footer-bn > ul > li:nth-child(3) > ul > li > a:hover {
+    color: #000;
+}
+
+.footer > .footer-bn > ul > li:nth-child(4) {
+    padding: 0;
+}
+
+.footer > .footer-bn > ul > li:nth-child(4) > ul > li {
+    padding: 0;
+}
+
+.footer > .footer-nav {
+    text-align: center;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.footer > .footer-nav > ul {
+    display: inline-block;
+}
+
+.footer > .footer-nav > ul > li {
+    width: 100px;
+}
+
+.footer > .footer-nav > ul > li > a {
+    display: block;
+    font-size: 11px;
+    color: #808080;
+    line-height: 38px;
+}
+
+.footer > .footer-nav > ul > li:nth-last-child(2) > a {
+    color: #000;
+}
+
+.footer > .footer-info > ul > li {
+    padding: 20px 0 0 20px;
+}
+
+.footer > .footer-info > ul > li.copyright {
+    position: relative;
+    width: 584px;
+    padding: 20px 0 0 15px;
+}
+
+.footer > .footer-info > ul > li.copyright > div {
+    font-size: 11.3px;
+    padding-bottom: 3px;
+}
+
+.footer > .footer-info > ul > li.copyright > div:first-child {
+    position: absolute;
+    right: 0;
+    text-decoration: underline;
+}
+
+.footer > .footer-info > ul > li.copyright > div.copy {
+    padding: 5px 0;
+}
+
+.footer > .footer-info > ul > li.copyright > div span.bold-text {
+    font-weight: bold;
+}
+
+.footer > .footer-info > ul > li.copyright > div span.underline-text {
+    text-decoration: underline;
+}
+
+.footer > .footer-info > ul > li.copyright > div.punish {
+    color: #808080;
+    padding-top: 3px;
+}
+
+.footer > .footer-info > ul > li:last-child {
+    padding: 0;
+}

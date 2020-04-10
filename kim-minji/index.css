@@ -7,6 +7,12 @@ body {
     background-color: ivory;
 }
 
+body {
+    background-image: url(https://minji-joker.github.io/portfolio/web_img/mj_portfolio/main_bg.png);
+    background-repeat: no-repeat;
+    height: 1000px;
+}
+
 html {
     font-family: "Noto Sans KR", sans-serif;
 }
@@ -343,6 +349,10 @@ overflow-x:hidden;
     letter-spacing: 23px;
 }
 
+.panel1 > .profile-page .profile > .info-1 > .cell {
+    letter-spacing: 10.5px;
+}
+
 .panel1 > .profile-page .profile .info-2 > .name {
     letter-spacing: 49px;
 }
@@ -353,6 +363,10 @@ overflow-x:hidden;
 
 .panel1 > .profile-page .profile .info-2 > .e-mail {
     letter-spacing: -1px;
+}
+
+.panel1 > .profile-page .profile > .info-2 > .cell {
+    letter-spacing: 2.9px;
 }
 
 /* 프로필 오른쪽 */
@@ -515,6 +529,126 @@ overflow-x:hidden;
     padding: 20px 0 0 10px;
 }
 
+/* 그래픽디자인 슬라이드 캐러셀 시작 */
+
+.carousel-1 > .owl-carousel > .owl-stage-outer > .owl-stage > .owl-item {
+    margin-top: 70px;
+}
+
+.carousel-1 > .owl-carousel > .owl-stage-outer > .owl-stage > .owl-item > .item {
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.carousel-1 > .owl-carousel > .owl-stage-outer > .owl-stage > .owl-item > .item > img {
+    border-radius: 10px;
+}
+
+
+.carousel-1 > .owl-carousel > .owl-nav {
+    margin: 0 !important;
+}
+
+.carousel-1 > .owl-carousel > .owl-nav > div.owl-next,
+.carousel-1 > .owl-carousel > .owl-nav > div.owl-prev {
+    color: skyblue;
+}
+
+.carousel-1 > .owl-carousel > .owl-nav > div {
+    padding: 0;
+    margin: 0 20px;
+    border-radius: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 4rem;
+}
+
+.carousel-1 > .owl-carousel > .owl-nav > div:hover {
+    color: navy;
+    background-color: transparent;
+}
+
+.carousel-1 > .owl-carousel > .owl-nav > div.owl-prev {
+    left: 120px;
+}
+
+.carousel-1 > .owl-carousel > .owl-nav > div.owl-next {
+    left: auto;
+    right: 120px;
+}
+
+.carousel-1 > .owl-carousel > .owl-dots {
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+.carousel-1 > .owl-carousel > .owl-dots.active {
+    background-color: red;
+}
+
+.carousel-1[data-carousel-1-autoplay-status="Y"] .play {
+    display: none;
+}
+
+.carousel-1[data-carousel-1-autoplay-status="N"] .stop {
+    display: none;
+}
+
+/* 자세히보기 팝업 */
+.carousel-1 > .owl-carousel > .owl-stage-outer > .owl-stage > .owl-item > .item .btn-1 {
+    position: absolute;
+    top: 55%;
+    left: 22.5%;
+    border: 3px solid #dfdfdf;
+    padding: 10px 21px;
+    border-radius: 10px;
+    z-index: 2;
+    font-size: 12px;
+    background-color: white;
+    color: #585858;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.carousel-1 > .owl-carousel > .owl-stage-outer > .owl-stage > .owl-item > .item  .btn-1:hover {
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.popup-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.popup-1 {
+    width: 600px;
+    position: fixed;
+    top: 50%;
+    left: 39.6%;
+    transform: translatex(-50%) translatey(-50%);
+    display: none;
+    z-index: 10;
+}
+
+.popup-1 > .head::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 /* 푸터 시작 */
 .footer {
     background-color: #272c85;
@@ -546,6 +680,7 @@ overflow-x:hidden;
 }
 
 .footer > .contact {
+    position: relative;
     position: relative;
     top: 0;
     left: 50%;
