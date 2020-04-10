@@ -136,7 +136,27 @@ $('.popup-bg, .popup-1').click(function () {
     $('html').addClass('no-scroll');
 });
 
+$('.popup-bg, .popup-2').click(function () {
+    $('.popup-2,.popup-bg').css('display', 'none');
+    $('html').addClass('no-scroll');
+});
+
+$('.popup-bg, .popup-3').click(function () {
+    $('.popup-3,.popup-bg').css('display', 'none');
+    $('html').addClass('no-scroll');
+});
+
 $('.btn-1').click(function () {
     $('.popup-1,.popup-bg').css('display', 'block');
+    $('html').addClass('no-scroll');
+});
+
+$('.btn-2').click(function () {
+    $('.popup-2,.popup-bg').css('display', 'block');
+    $('html').addClass('no-scroll');
+});
+
+$('.btn-3').click(function () {
+    $('.popup-3,.popup-bg').css('display', 'block');
     $('html').addClass('no-scroll');
 });
