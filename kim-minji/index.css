@@ -532,7 +532,7 @@ overflow-x:hidden;
 /* 그래픽디자인 슬라이드 캐러셀 시작 */
 
 .carousel-1 > .owl-carousel > .owl-stage-outer > .owl-stage > .owl-item {
-    margin-top: 70px;
+    margin-top: 40px;
 }
 
 .carousel-1 > .owl-carousel > .owl-stage-outer > .owl-stage > .owl-item > .item > img {
