@@ -647,7 +647,7 @@ overflow-x:hidden;
 .popup-2 {
     position: fixed;
     top: 50%;
-    left: 39.6%;
+    left: 50%;
     transform: translatex(-50%) translatey(-50%);
     display: none;
     z-index: 10;
