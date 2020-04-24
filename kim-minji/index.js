@@ -107,7 +107,7 @@ $('.carousel-1 > .owl-carousel').owlCarousel({
     loop: true, // 끝에서 다시 처음으로 시작
     margin: 0,
     nav: true,
-    navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
+    navText: ['<i class="xi-angle-left-thin"></i>', '<i class="xi-angle-right-thin"></i>'],
     responsive: {
         0: {
             items: 1
